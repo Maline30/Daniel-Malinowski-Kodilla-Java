@@ -2,7 +2,12 @@ HELP.md
 .gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar
-**/out/ **/build/
+**/out/
+/out/
+**/build/
+**/target/
+/target/
+
 
 ### STS ###
 .apt_generated
