@@ -12,7 +12,6 @@ import org.junit.Test;
 public class CollectionTestSuite {
 
     @Test
-    @Before
     public void testOddNumbersExterminatorEmptyList(){
         //Given
         ArrayList<Integer> emptyList = new ArrayList<>();
