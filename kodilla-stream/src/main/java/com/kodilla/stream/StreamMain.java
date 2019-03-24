@@ -26,7 +26,7 @@ public class StreamMain {
         forumUserMap.entrySet().stream()
                     .map(entry -> entry.getKey() + ": "+ entry.getValue())
                     .forEach(System.out::println);
-    */
+
 
     ExpressionExecutor expressionExecutor = new ExpressionExecutor();
 
@@ -41,16 +41,16 @@ public class StreamMain {
         expressionExecutor.executeExpression(3, 4, FunctionalCalculator::addAToB);
         expressionExecutor.executeExpression(3, 4, FunctionalCalculator::subBFromA);
         expressionExecutor.executeExpression(3, 4, FunctionalCalculator::divideAByB);
-
+    */
         PoemBeautifier poemBeautifier = new PoemBeautifier();
 
         poemBeautifier.beautify("Lambda",(word -> word.toUpperCase()));
         poemBeautifier.beautify("Lambda",(word -> "***" + word + "***"));
         poemBeautifier.beautify("Lambda",(word -> word.replaceAll("Lambda", "LaMbDa")));
 
-        System.out.println("Using stream to generate even numbers from 1 to 20");
+        //System.out.println("Using stream to generate even numbers from 1 to 20");
 
-        NumbersGenerator.generateEven(20);
+        //NumbersGenerator.generateEven(20);
 }
 
 
