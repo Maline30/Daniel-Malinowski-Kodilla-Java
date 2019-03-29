@@ -57,8 +57,8 @@ public class forumStatisticsTestSuite {
         forumStatistics.calculateAdvStatistics(statisticsMock);
         //Then
         assertEquals(0, forumStatistics.getPostQuantity());
-        assertEquals(0, forumStatistics.getPostsAvgOnUsers(),0.01);
-        assertEquals(0, forumStatistics.getCommentsAvgOnPosts(),0.01);
+        assertEquals(0, forumStatistics.getPostsAvgOnUsers(), 0.01);
+        assertEquals(0, forumStatistics.getCommentsAvgOnPosts(), 0.01);
     }
 
     @Test
@@ -68,9 +68,9 @@ public class forumStatisticsTestSuite {
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
         //Then
-        assertEquals(1000,forumStatistics.getPostQuantity());
-        assertEquals(100,forumStatistics.getPostsAvgOnUsers(),2000);
-        assertEquals(10,forumStatistics.getPostQuantity(),2000);
+        assertEquals(1000, forumStatistics.getPostQuantity());
+        assertEquals(100, forumStatistics.getPostsAvgOnUsers(), 2000);
+        assertEquals(10, forumStatistics.getPostQuantity(), 2000);
     }
 
     @Test
@@ -80,9 +80,9 @@ public class forumStatisticsTestSuite {
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
         //Then
-        assertEquals(0,forumStatistics.getCommentsQuantity());
-        assertEquals(0,forumStatistics.getCommentsAvgOnPosts(),0.1);
-        assertEquals(0,forumStatistics.getCommentsAvgOnUsers(),0.1);
+        assertEquals(0, forumStatistics.getCommentsQuantity());
+        assertEquals(0, forumStatistics.getCommentsAvgOnPosts(), 0.1);
+        assertEquals(0, forumStatistics.getCommentsAvgOnUsers(), 0.1);
     }
 
     @Test
@@ -93,32 +93,32 @@ public class forumStatisticsTestSuite {
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
         //Then
-        assertEquals(50,forumStatistics.getPostQuantity());
-        assertEquals(20,forumStatistics.getCommentsQuantity());
-        assertEquals(2.5,forumStatistics.getPostsAvgOnUsers(),0.01);
-        assertEquals(0.4,forumStatistics.getCommentsAvgOnPosts(),0.01);
-        assertEquals(1.0,forumStatistics.getCommentsAvgOnUsers(),0.01);
+        assertEquals(50, forumStatistics.getPostQuantity());
+        assertEquals(20, forumStatistics.getCommentsQuantity());
+        assertEquals(2.5, forumStatistics.getPostsAvgOnUsers(), 0.01);
+        assertEquals(0.4, forumStatistics.getCommentsAvgOnPosts(), 0.01);
+        assertEquals(1.0, forumStatistics.getCommentsAvgOnUsers(), 0.01);
     }
 
     @Test
-    public  void calculateAdvStatisticsWithCommentsBiggerThanPosts(){
+    public void calculateAdvStatisticsWithCommentsBiggerThanPosts() {
         //Given
         when(statisticsMock.postsCount()).thenReturn(20);
         when(statisticsMock.commentsCount()).thenReturn(50);
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
         //Then
-        assertEquals(20,forumStatistics.getPostQuantity());
-        assertEquals(50,forumStatistics.getCommentsQuantity());
-        assertEquals(1.0,forumStatistics.getPostsAvgOnUsers(),0.01);
-        assertEquals(2.5,forumStatistics.getCommentsAvgOnPosts(),0.01);
-        assertEquals(2.5,forumStatistics.getCommentsAvgOnUsers(),0.01);
+        assertEquals(20, forumStatistics.getPostQuantity());
+        assertEquals(50, forumStatistics.getCommentsQuantity());
+        assertEquals(1.0, forumStatistics.getPostsAvgOnUsers(), 0.01);
+        assertEquals(2.5, forumStatistics.getCommentsAvgOnPosts(), 0.01);
+        assertEquals(2.5, forumStatistics.getCommentsAvgOnUsers(), 0.01);
     }
 
     @Test
-    public  void calculateAdvStatisticsWithZeroUsers(){
+    public void calculateAdvStatisticsWithZeroUsers() {
         //Given
-        List<String>listMock = new ArrayList<>();
+        List<String> listMock = new ArrayList<>();
 
         when(statisticsMock.usersNames()).thenReturn(listMock);
         //When
@@ -130,11 +130,11 @@ public class forumStatisticsTestSuite {
     }
 
     @Test
-    public  void calculateAdvStatisticsWithHundredUsers(){
+    public void calculateAdvStatisticsWithHundredUsers() {
         //Given
         List<String> mockList = new ArrayList<>();
 
-        for(int i = 0; i < 100 ; i++){
+        for (int i = 0; i < 100; i++) {
             mockList.add("User");
         }
         when(statisticsMock.usersNames()).thenReturn(mockList);

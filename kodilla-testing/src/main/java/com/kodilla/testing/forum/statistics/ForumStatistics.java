@@ -33,7 +33,7 @@ public class ForumStatistics {
         return commentsAvgOnPosts;
     }
 
-    public void calculateAdvStatistics(Statistics statistics){
+    public void calculateAdvStatistics(Statistics statistics) {
         userQuantity = statistics.usersNames().size();
         postQuantity = statistics.postsCount();
         commentsQuantity = statistics.commentsCount();
@@ -42,31 +42,31 @@ public class ForumStatistics {
         postsAvgOnUsers = calculatePostAvgOnUsers();
     }
 
-    double calculatePostAvgOnUsers(){
-        if(userQuantity > 0){
-            return (double)postQuantity / userQuantity;
-        }else{
+    double calculatePostAvgOnUsers() {
+        if (userQuantity > 0) {
+            return (double) postQuantity / userQuantity;
+        } else {
             return 0;
         }
     }
 
-    double calculateCommentsAvgOnUser(){
-        if(userQuantity > 0){
-            return (double)commentsQuantity / userQuantity;
-        }else{
+    double calculateCommentsAvgOnUser() {
+        if (userQuantity > 0) {
+            return (double) commentsQuantity / userQuantity;
+        } else {
             return 0;
         }
     }
 
-    double calculateCommentsAvgOnPosts(){
-        if(postQuantity > 0){
-            return (double)commentsQuantity / postQuantity;
-        }else{
+    double calculateCommentsAvgOnPosts() {
+        if (postQuantity > 0) {
+            return (double) commentsQuantity / postQuantity;
+        } else {
             return 0;
         }
     }
 
-    void showForumStatistics(){
+    void showForumStatistics() {
         System.out.println("Forum Statistics");
         System.out.println("Users: " + userQuantity);
         System.out.println("Posts: " + postQuantity);

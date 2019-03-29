@@ -8,16 +8,16 @@ public final class World {
 
     private final List<Continent> continentsList = new ArrayList<>();
 
-    public boolean addContinent(Continent continent){
+    public boolean addContinent(Continent continent) {
         return continentsList.add(continent);
     }
 
-    public BigDecimal getPeopleQuantity(){
+    public BigDecimal getPeopleQuantity() {
         BigDecimal peopleQtyOnTheWorld = continentsList.stream()
                 .flatMap(continent -> continent.getListOfCountriesOnContinent().stream())
                 .distinct()
                 .map(Country::getPeopleQuantity)
-                .reduce(BigDecimal.ZERO, (sum,country) -> sum.add(country));
+                .reduce(BigDecimal.ZERO, (sum, country) -> sum.add(country));
 
         return peopleQtyOnTheWorld;
     }

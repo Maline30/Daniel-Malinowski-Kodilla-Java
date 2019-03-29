@@ -7,6 +7,7 @@ import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.reference.FunctionalCalculator;
 import com.kodilla.stream.beautifier.PoemDecorator;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Map;
@@ -44,20 +45,14 @@ public class StreamMain {
     */
         PoemBeautifier poemBeautifier = new PoemBeautifier();
 
-        poemBeautifier.beautify("Lambda",(word -> word.toUpperCase()));
-        poemBeautifier.beautify("Lambda",(word -> "***" + word + "***"));
-        poemBeautifier.beautify("Lambda",(word -> word.replaceAll("Lambda", "LaMbDa")));
+        poemBeautifier.beautify("Lambda", (word -> word.toUpperCase()));
+        poemBeautifier.beautify("Lambda", (word -> "***" + word + "***"));
+        poemBeautifier.beautify("Lambda", (word -> word.replaceAll("Lambda", "LaMbDa")));
 
         //System.out.println("Using stream to generate even numbers from 1 to 20");
 
         //NumbersGenerator.generateEven(20);
-}
-
-
-
-
-
-
+    }
 
 
 }

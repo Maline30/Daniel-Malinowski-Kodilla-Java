@@ -7,7 +7,6 @@ public class Book {
     private final String signature;
 
 
-
     public Book(final String author, final String title,
                 final int yearOfPublication, final String signature) {
         this.author = author;

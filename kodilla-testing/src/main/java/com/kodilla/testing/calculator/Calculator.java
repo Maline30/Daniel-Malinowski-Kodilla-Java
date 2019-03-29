@@ -5,7 +5,7 @@ public class Calculator {
     private int a;
     private int b;
 
-    public Calculator(int a,int b){
+    public Calculator(int a, int b) {
         this.a = a;
         this.b = b;
     }
@@ -18,12 +18,12 @@ public class Calculator {
         return b;
     }
 
-    public int add (){
+    public int add() {
         int addResult = a + b;
         return addResult;
     }
 
-    public int subtract (){
+    public int subtract() {
         int subResult = a - b;
         return subResult;
     }
